@@ -1,0 +1,19 @@
+static_library("trace_demo") {
+  sources = [
+    "hal_iot_gpio_ex.c",
+    "hal_iot_adc.c",
+    "trace_module.c",
+    "motor_control.c",
+    "pca9555.c",
+    "ssd1306.c",
+    "//third_party/ssd1306/ssd1306_fonts.c",
+  ]
+
+  include_dirs = [
+    "./",
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//third_party/ssd1306"
+    ]
+}
